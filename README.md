@@ -19,6 +19,8 @@ You can start editing the page by modifying `pages/index.js`. The page auto-upda
 All you need to do is is, just enter the phone number and click on the `Create your QRScanner` button. The 
 QR Code Scanner will automatically be created.
 
+![image](https://user-images.githubusercontent.com/45737260/172005919-69947f43-2052-4042-af8a-1c3beec068c4.png)
+
 `Give a start to this project, if you found it helpful`
 
 [API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
