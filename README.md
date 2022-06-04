@@ -14,6 +14,13 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
+## How to use
+
+All you need to do is is, just enter the phone number and click on the `Create your QRScanner` button. The 
+QR Code Scanner will automatically be created.
+
+`Give a start to this project, if you found it helpful`
+
 [API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
 
 The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
