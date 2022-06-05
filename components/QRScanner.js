@@ -2,8 +2,11 @@ import Image from "next/image";
 import { useState } from "react"
 import QRCode from "react-qr-code";
 import whatsapp from "../assets/whatsapp.svg";
+import { useRouter } from "next/router";
 
 export default function QRScanner() {
+
+const router = useRouter()
 const [number, setNumber] = useState("")
 const [storeName, setStoreName] = useState("")
 const [qrVisivle, setQrVisivle] = useState(false)
@@ -18,13 +21,17 @@ const handleSubmit = () => {
     }
 }
 
+const handleUPI = () => {
+    router.push('/donate')
+}
+
   return (
     <>
-    {qrVisivle  &&
+      {qrVisivle  &&
         <div className="relative flex flex-col md:items-center items-center gap-2 md:gap-12 justify-center overflow-hidden h-screen">
                 <h2 className="text-2xl md:text-4xl font-semibold">Store Name: {storeName}</h2>
                 <div className="mt-16 sm:mt-24 lg:mt-0 lg:col-span-6 rounded-lg">
-                    <div className="bg-white space-y-5 md:px-10 rounded-xl flex flex-col items-center justify-center md:py-10 p-4 sm:max-w-md sm:w-full sm:mx-auto sm:rounded-lg sm:overflow-hidden">
+                    <div className="bg-white text-4xl space-y-5 md:px-10 rounded-xl flex flex-col items-center justify-center md:py-10 p-4 sm:max-w-md sm:w-full sm:mx-auto sm:rounded-lg sm:overflow-hidden">
                         <QRCode value={`https://wa.me/+91${number}`} />
                     </div>
                 </div>
@@ -101,7 +108,7 @@ const handleSubmit = () => {
                                     maxLength={10}
                                     value={storeName}
                                     onChange={(e)=>{setStoreName(e.target.value)}}
-                                    placeholder="Enter your store name"
+                                    placeholder="Enter your store name eg. Example Provision Store"
                                     autoComplete="current-password"
                                     required
                                     className="block w-full shadow-sm focus:ring-[#36f03c] focus:border-[#36f03c] sm:text-sm border-[#36f03c] rounded-md"
@@ -130,7 +137,7 @@ const handleSubmit = () => {
                                         Create your QRScanner
                                     </button>
                                     <button
-                                    onClick={handleSubmit}
+                                    onClick={handleUPI}
                                         type="submit"
                                         className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-[#13ae9c] hover:bg-[#36f03c] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#128c7e]"
                                     >
