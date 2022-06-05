@@ -104,7 +104,7 @@ const handleUPI = () => {
                                 <input
                                     id="text"
                                     name="text"
-                                    type="tel"
+                                    type="text"
                                     maxLength={10}
                                     value={storeName}
                                     onChange={(e)=>{setStoreName(e.target.value)}}
